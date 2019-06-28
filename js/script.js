@@ -114,6 +114,10 @@ let showPage = (list, page) => {
 
 
 let pageNums = (takeInStudents) => {
+    if(takeInStudents.length > 0 && takeInStudents.length < 10 || takeInStudents.length % 10 > 0 && takeInStudents.length % 10 < 10) {
+        pageCount += 1;
+    }
+    
     for (let i = 0; i < takeInStudents.length; i++) {
         studentCount += 1;
         if (studentCount == 10) {
